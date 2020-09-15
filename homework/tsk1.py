@@ -5,19 +5,9 @@
 """
 
 
-def num_div(user_a, user_b):
-    return user_a / user_b
+def num_div(first, second):
+    return first / second
 
-
-'''
-while True:
-    user_input = input('Введите натуральное число\n')
-    if user_input.isdigit():
-        user_input = int(user_input)
-        break
-    print('Ошибка ввода')
-
-'''
 
 while True:
     try:
