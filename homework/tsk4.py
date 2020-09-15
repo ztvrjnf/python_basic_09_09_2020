@@ -18,6 +18,7 @@ def my_func_2(x, y):
         return 1 / res
 
 
+
 while True:
     try:
         user_1 = float(input("Укажите первое число: "))

@@ -15,6 +15,7 @@ user_str = input()
 def int_func(capital):
     return capital.capitalize()
 
+
 i = 0
 output = ''
 mapping = user_str.split()

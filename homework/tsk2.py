@@ -19,3 +19,4 @@ profile_template_1 = profile_template(('Name', 'Surname', 'Birth_year', 'City', 
 user_input = input().split()
 output = profile_template_1(user_input)
 print(output)
+

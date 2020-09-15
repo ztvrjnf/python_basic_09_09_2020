@@ -9,6 +9,7 @@ def num_div(first, second):
     return first / second
 
 
+
 while True:
     try:
         user_a = float(input("Укажите первое число: "))

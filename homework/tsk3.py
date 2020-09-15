@@ -13,6 +13,7 @@ def my_func(first, second, third):
     max_sum = first + second + third - compare
     return max_sum
 
+
 while True:
     try:
         user_1 = float(input("Укажите первое число: "))
