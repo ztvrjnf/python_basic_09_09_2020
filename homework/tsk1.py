@@ -4,12 +4,17 @@
 Для выполнения расчета для конкретных значений необходимо запускать скрипт с параметрами.
 """
 
+
 from sys import argv
 
-_, time, salary, bonus = argv
 
-time = int(time)
-salary = int(salary)
-bonus = int(bonus)
-res = time * salary + bonus
-print(res)
+def money(time, salary, bonus):
+    return time * salary + bonus
+
+
+_, time, salary, bonus, = argv
+
+try:
+    print(money(float(time), float(salary), float(bonus)))
+except ValueError as e:
+    print("data entry error")

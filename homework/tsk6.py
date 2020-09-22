@@ -9,10 +9,13 @@
 
 from itertools import count, cycle
 
+cycle_count = 0
+
 for el in count(int(input('Введите стартовое число '))):
     print(el)
-    if el > 45:
+    if cycle_count > 20:
         break
+    cycle_count += 1
 
 cycle_count = 0
 my_list = [True, False, 97585, None]

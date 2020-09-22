@@ -11,5 +11,5 @@ def my_func(el_p, el):
     return el_p * el
 
 
-print(f'Список четных чисел {[el for el in range(99, 1001) if el % 2 == 0]}')
-print(f'Результат перемножения {reduce(my_func, [el for el in range(99, 1001) if el % 2 == 0])}')
+print(f'Список четных чисел {[el for el in range(100, 1001) if not el & 1]}')
+print(f'Результат перемножения {reduce(my_func, [el for el in range(100, 1001) if not el & 1])}')

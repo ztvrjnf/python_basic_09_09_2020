@@ -6,20 +6,20 @@ for el in fact(n). Функция отвечает за получение фа�
 Подсказка: факториал числа n — произведение чисел от 1 до n. Например, факториал четырёх 4! = 1 * 2 * 3 * 4 = 24.
 """
 
-from itertools import count
-from math import factorial
 
 
-def fact(_):
-    for el in count(1):
-        yield factorial(el)
+def fact_gen(n):
+    fact = 1
+    prev = 1
 
-
-x = 0
-n = 18
-for el in fact(n):
-    if x < n:
-        print(el)
-        x += 1
+    if n > 0:
+        while prev <= n:
+            yield fact
+            prev += 1
+            fact *= prev
     else:
-        break
+        print("Факториал вычисляется из числа больше нуля")
+
+
+for itm in enumerate(fact_gen(12)):
+    print(itm)
