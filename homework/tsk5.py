@@ -1,15 +1,21 @@
 """
-Создать (программно) текстовый файл, записать в него программн онабор чисел,
+Создать (программно) текстовый файл, записать в него программно набор чисел,
 разделенных пробелами. Программа должна подсчитывать сумму чисел в файле и выводить ее на экран.
 """
+import os
+import random
+
+file_path = os.path.join(os.path.dirname(__file__), 'task5.txt')
+
+to_file_numbers = [random.randint(1, 100) for _ in range(random.randint(10, 200))]
 
 
-def summary():
+def sum_all():
     try:
         with open('task5.txt', 'w+') as file_obj:
-            line = input('Введите цифры через пробел \n')
-            file_obj.writelines(line)
-            my_numb = line.split()
+            numbers = ' '.join(map(str, to_file_numbers))
+            file_obj.writelines(numbers)
+            my_numb = numbers.split()
             print(sum(map(int, my_numb)))
     except IOError:
         print('Ошибка в файле')
@@ -17,4 +23,4 @@ def summary():
         print('Ошибка ввода данных')
 
 
-summary()
+sum_all()

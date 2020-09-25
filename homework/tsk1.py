@@ -3,10 +3,13 @@
 Об окончании ввода данных свидетельствует пустая строка.
 """
 
-my_file = open('test.txt', 'w')
-line = input('Введите текст \n')
-while line:
-    my_file.writelines(line)
-    line = input('Введите текст \n')
-    if not line:
-        break
+import os
+
+file_path = os.path.join(os.path.dirname(__file__), 'task1.txt')
+
+with open(file_path, 'w', encoding='UTF-8') as file:
+    while True:
+        line = input('Введите текст \n')
+        if not line:
+            break
+        file.write(f'{line}\n')
